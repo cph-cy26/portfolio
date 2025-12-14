@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link id="favicon" rel="icon" href="img/favicon-dark.png">
+  <title>Charlotte Yde</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,600,0,0&icon_names=close" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,0,0&icon_names=arrow_forward" />
+  <link rel="stylesheet" href="stylesheet.css" />
+</head>
+
+<body>
+  <!-- NAV -->
+  <header class="nav-bar">
+    <div class="logo">CHARLOTTE<span class="brandmark">YDE</span></div>
+    <div class="location-time">
+      Copenhagen, Denmark, <span id="clock"></span>
+    </div>
+    <div id="darkToggle" class="dark-toggle pulsing">
+
+    </div>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="hero-logo" id="heroLogo">
+      <span class="hero-name">CHARLOTTE</span>
+      <span class="brandmark-hero">YDE</span>
+    </div>
+    <p>Digital Concept Developer & product designer.
+      <br>I design digital products that turn complexity into clarity.
+    </p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="sections">
+    <div class="work-header">
+      <h1>WORK</h1>
+      <h2>Selected projects</h2>
+    </div>
+
+    <div class="projects">
+      <div class="project-card" data-title="Hørt" data-desc="Digital concept for young people with hearing loss."
+        data-year="2025" data-longdesc="Dette projekt handler om at skabe et digitalt univers for unge med høretab ..."
+        data-tags="UX · UI · Concept Development" data-img="img/hoert-app.png"
+        data-gallery="img/hoert-1.png,img/hoert-2.png" data-video="" data-link="hoert-case.html">
+
+        <img src="img/hoert-app.png" alt="">
+        <h3>Hørt</h3>
+        <p>Digital concept for young people with a hearing loss</p>
+        <p>Student project, 2025</p>
+      </div>
+
+      <div class="project-card" data-title="Horisont"
+        data-desc="Digital concept for retirement. Student project, 2025.">
+        <img src="img/horisont.app.png" alt="">
+        <h3>Horisont</h3>
+        <p>Digital concept for retirement</p>
+        <p>Student project, 2025</p>
+      </div>
+
+      <div class="project-card" data-title="Whirl"
+        data-desc="Digital tool for anxiety management. Final exam project, 2025.">
+        <img src="img/whirl-app.png" alt="">
+        <h3>Whirl</h3>
+        <p>Digital tool for anxiety management</p>
+        <p>Final exam project, 2025</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modalBox">
+      <div class="modal-handle"></div>
+      <span class="material-symbols-rounded close-icon" id="closeModal">close</span>
+
+      <img id="modalImage" alt="Project image">
+
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+      <p id="modalYear" class="modal-year"></p>
+
+      <div id="modalLongDesc" class="modal-longdesc"></div>
+      <p id="modalTags" class="modal-tags"></p>
+
+      <!-- Gallery -->
+      <div class="modal-gallery" id="modalGallery"></div>
+
+      <!-- Video -->
+      <video id="modalVideo" controls style="display:none; width:100%; border-radius:12px;"></video>
+
+      <a id="modalLink" class="modal-link" href="#" target="_blank">View full case</a>
+
+    </div>
+  </div>
+
+  <section class="process">
+    <div class="process-image">
+      <div class="process-image-wrapper">
+        <img src="img/insight-img.png" alt="" id="processImg">
+      </div>
+    </div>
+
+    <div class="process-text">
+      <h2>Process approach</h2>
+
+      <h1 class="step">
+        <span data-img="img/mindmap.png"><span class="material-symbols-rounded arrow">
+            arrow_forward
+          </span>FROM PROBLEM</span>
+
+      </h1>
+
+      <h1 class="step">
+        <span data-img="img/horisont-pension.png"><span class="material-symbols-rounded arrow">
+            arrow_forward
+          </span>TO
+          INSIGHT</span>
+
+      </h1>
+
+      <h1 class="step">
+        <span data-img="img/whirl-desktop.png"> <span class="material-symbols-rounded arrow">
+            arrow_forward
+          </span>TO
+          CONCEPT</span>
+
+      </h1>
+    </div>
+  </section>
+
+  <section class="sections">
+    <div class="work-header">
+      <h1>HI, I'M CHARLOTTE</h1>
+      <h2>Who am I?</h2>
+    </div>
+
+    <div class="about-section">
+      <div class="about-card">
+        <img src="img/me.jpg" class="me-img">
+      </div>
+      <div class="about-card">
+
+        <p>I work with insight-driven design strategies, transforming research and data into thoughtful UX structures
+          and digital concepts.</p>
+
+      </div>
+      <div class="about-card">
+        <h3>Horisont</h3>
+        <p>Digital concept for retirementDigital concept for retiremenDigital concept for retiremenDigital concept for
+          retiremen</p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- Contact Section -->
+  <section class="scroll-text-section">
+    <h2 class="animated-text">
+      <span>L</span><span>E</span><span>T</span><span>'</span><span>S</span>
+      <span></span><span></span><span>C</span><span>O</span><span>N</span><span>N</span><span>E</span><span>C</span><span>T</span>
+    </h2>
+  </section>
+
+
+
+  <script>
+    // REAL-TIME CLOCK (Copenhagen)
+    function updateClock() {
+      const now = new Date();
+      const options = {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
+        timeZone: "Europe/Copenhagen"
+      };
+      document.getElementById("clock").innerText =
+        new Intl.DateTimeFormat("en-GB", options).format(now);
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    const toggle = document.getElementById("darkToggle");
+
+    // Apply saved theme on page load
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      document.body.classList.toggle("dark", savedTheme === "dark");
+    }
+
+    // Toggle dark mode on click
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+
+      // Save current theme to localStorage
+      if (document.body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+      } else {
+        localStorage.setItem("theme", "light");
+      }
+    });
+  </script>
+
+  <script>
+
+    const cards = document.querySelectorAll(".project-card");
+    const modal = document.getElementById("modalOverlay");
+
+    const modalImage = document.getElementById("modalImage");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalDesc = document.getElementById("modalDesc");
+    const modalYear = document.getElementById("modalYear");
+    const modalLongDesc = document.getElementById("modalLongDesc");
+    const modalTags = document.getElementById("modalTags");
+    const modalGallery = document.getElementById("modalGallery");
+    const modalVideo = document.getElementById("modalVideo");
+    const modalLink = document.getElementById("modalLink");
+
+    const closeModal = document.getElementById("closeModal");
+
+    cards.forEach(card => {
+      card.addEventListener("click", () => {
+
+        // Basic info
+        modalTitle.textContent = card.dataset.title || "";
+        modalDesc.textContent = card.dataset.desc || "";
+        modalYear.textContent = card.dataset.year || "";
+        modalLongDesc.textContent = card.dataset.longdesc || "";
+        modalTags.textContent = card.dataset.tags || "";
+
+        // Main image
+        modalImage.src = card.dataset.img || "";
+
+        // Link
+        modalLink.style.display = card.dataset.link ? "inline-block" : "none";
+        modalLink.href = card.dataset.link || "#";
+
+        // Gallery
+        modalGallery.innerHTML = "";
+        if (card.dataset.gallery) {
+          const images = card.dataset.gallery.split(",");
+          images.forEach(src => {
+            const img = document.createElement("img");
+            img.src = src.trim();
+            img.style.width = "100%";
+            img.style.borderRadius = "12px";
+            img.style.marginTop = "10px";
+            modalGallery.appendChild(img);
+          });
+        }
+
+        // Video
+        if (card.dataset.video) {
+          modalVideo.src = card.dataset.video;
+          modalVideo.style.display = "block";
+        } else {
+          modalVideo.style.display = "none";
+        }
+
+        modal.style.display = "flex";
+      });
+    });
+
+    // Close
+    closeModal.addEventListener("click", () => modal.style.display = "none");
+    modal.addEventListener("click", e => {
+      if (e.target === modal) modal.style.display = "none";
+    });
+    cards.forEach(card => {
+      card.addEventListener("click", () => {
+        // Fill modal content...
+
+        modal.style.display = "flex";
+
+        // Prevent background scroll
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    // Close modal
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+      document.body.style.overflow = ""; // Restore scroll
+    });
+
+    modal.addEventListener("click", e => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = ""; // Restore scroll
+      }
+    });
+
+
+    // HERO LOGO SCROLL EFFECT
+    const heroLogo = document.getElementById("heroLogo");
+
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+      const speed = 0.1; // Justér hvor stærkt den bevæger sig
+
+      heroLogo.style.transform = `translate(-50%, calc(-50% + ${scrollY * speed}px))`;
+    });
+
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark") {
+      document.body.classList.add("dark");
+    }
+
+
+    const animatedSpans = document.querySelectorAll('.animated-text span');
+
+    const letters = document.querySelectorAll('.animated-text span');
+    const section = document.querySelector('.scroll-text-section');
+
+    window.addEventListener('scroll', () => {
+      const sectionTop = section.getBoundingClientRect().top;
+      const sectionHeight = section.offsetHeight;
+      const windowHeight = window.innerHeight;
+
+      letters.forEach((letter, index) => {
+        // The factor controls how fast each letter moves
+        const speedFactor = 1 + index * 0; // stagger speed per letter
+
+        // Calculate progress: 0 = section bottom offscreen, 1 = section top at viewport top
+        let progress = (windowHeight - sectionTop) / (windowHeight + sectionHeight);
+        progress = Math.min(Math.max(progress, 0), 1); // clamp between 0 and 1
+
+        const maxOffset = 80; // start offscreen
+        const translateX = Math.max(maxOffset * (1 - progress * speedFactor), 0);
+        letter.style.transform = `translateX(${translateX}vw)`;
+        letter.style.opacity = progress; // fade in with scroll
+      });
+    });
+
+  </script>
+
+  <script>
+    const items = document.querySelectorAll('.process-text span');
+    const image = document.getElementById('processImg');
+
+    let activeItem = items[0]; // default active
+
+    // Initialize
+    activeItem.classList.add('active');
+    image.src = activeItem.dataset.img;
+
+    // Hover (temporary)
+    items.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        image.src = item.dataset.img; // show hovered image
+      });
+
+      item.addEventListener('mouseleave', () => {
+        image.src = activeItem.dataset.img; // revert to clicked image
+      });
+
+      // Click (permanent)
+      item.addEventListener('click', () => {
+        if (activeItem) activeItem.classList.remove('active'); // remove previous
+        item.classList.add('active');
+        activeItem = item; // set new permanent active
+        image.src = item.dataset.img; // show clicked image
+      });
+    });
+  </script>
+
+  <script>
+    const steps = document.querySelectorAll('.step');
+
+    steps.forEach(step => {
+      step.addEventListener('click', () => {
+        steps.forEach(s => s.classList.remove('active'));
+        step.classList.add('active');
+
+        // Hvis du vil bruge data-img senere:
+        const img = step.querySelector('span[data-img]')?.dataset.img;
+        console.log(img);
+      });
+    });
+  </script>
+
+</body>
+
+</html>
