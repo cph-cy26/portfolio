@@ -9,9 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,600,0,0&icon_names=close" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,0,0&icon_names=arrow_forward" />
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="stylesheet.css" />
 </head>
 
@@ -41,12 +39,13 @@
   <section class="sections">
     <div class="work-header">
       <h1>WORK</h1>
-      <h2>Selected projects</h2>
+      <h2>Highlighted projects</h2>
     </div>
 
     <div class="projects">
-      <div class="project-card" data-title="Hørt" data-desc="Digital concept for young people with hearing loss."
-        data-year="2025" data-longdesc="Dette projekt handler om at skabe et digitalt univers for unge med høretab ..."
+      <div class="project-card" data-modal="modal-hoert" data-title="Hørt"
+        data-desc="Digital concept for young people with hearing loss." data-year="2025"
+        data-longdesc="Dette projekt handler om at skabe et digitalt univers for unge med høretab ..."
         data-tags="UX · UI · Concept Development" data-img="img/hoert-app.png"
         data-gallery="img/hoert-1.png,img/hoert-2.png" data-video="" data-link="hoert-case.html">
 
@@ -56,7 +55,7 @@
         <p>Student project, 2025</p>
       </div>
 
-      <div class="project-card" data-title="Horisont"
+      <div class="project-card" data-modal="modal-horisont" data-title="Horisont"
         data-desc="Digital concept for retirement. Student project, 2025.">
         <img src="img/horisont.app.png" alt="">
         <h3>Horisont</h3>
@@ -64,7 +63,7 @@
         <p>Student project, 2025</p>
       </div>
 
-      <div class="project-card" data-title="Whirl"
+      <div class="project-card" data-modal="modal-whirl" data-title="Whirl"
         data-desc="Digital tool for anxiety management. Final exam project, 2025.">
         <img src="img/whirl-app.png" alt="">
         <h3>Whirl</h3>
@@ -75,33 +74,227 @@
   </section>
 
 
-  <!-- MODAL -->
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal" id="modalBox">
-      <div class="modal-handle"></div>
-      <span class="material-symbols-rounded close-icon" id="closeModal">close</span>
 
-      <img id="modalImage" alt="Project image">
 
-      <h2 id="modalTitle"></h2>
-      <p id="modalDesc"></p>
-      <p id="modalYear" class="modal-year"></p>
+  <div class="project-modal" id="modal-hoert">
+    <div class="project-modal__backdrop"></div>
+    <div class="project-modal__sheet">
+      <div class="project-modal__close-container">
+        <button class="project-modal__close">
+          <span class="material-symbols-rounded">close</span>
+        </button>
+      </div>
 
-      <div id="modalLongDesc" class="modal-longdesc"></div>
-      <p id="modalTags" class="modal-tags"></p>
+      <header class="modal-topbar nav-bar">
+        <div class="logo">CHARLOTTE<span class="brandmark">YDE</span></div>
+        <div class="location-time">
+          Copenhagen, Denmark, <span class="modal-clock"></span>
+        </div>
+        <div class="dark-toggle modalDarkToggle"></div>
+      </header>
 
-      <!-- Gallery -->
-      <div class="modal-gallery" id="modalGallery"></div>
 
-      <!-- Video -->
-      <video id="modalVideo" controls style="display:none; width:100%; border-radius:12px;"></video>
+      <div class="project-modal__content">
+        <div class="project-intro">
+          <p class="p2">Student Project 2025</p>
+          <p class="p2">Digital Concept Development</p>
+          <h2>HØRT</h2>
+          <p class="intro-desc">
+            This project was developed in collaboration with a client aiming to empower young people with hearing loss
+            to take ownership of their hearing health and feel comfortable speaking openly about their condition.
+          </p>
+        </div>
+        <div class="project-visual">
+          <img src="img/hoert-recap.png" class="project-modal__image" alt="">
+        </div>
 
-      <a id="modalLink" class="modal-link" href="#" target="_blank">View full case</a>
+        <div class="project-visual">
+          <img src="img/workshop.png" class="project-modal__image" alt="">
+        </div>
+        <div class="project-intro">
 
+          <h3>Research</h3>
+          <p class="intro-desc">
+            We began with a divergent research phase, conducting desk research that included market and competitor
+            analysis
+            <br> <br>
+            We then interviewed a young person with hearing loss to incorporate the user perspective.
+            <br> <br>
+            Finally, we synthesized our findings through hypothesis brainstorming and affinity diagramming, identifying
+            recurring themes and clarifying key user needs.
+          </p>
+        </div>
+
+
+        <div class="project-intro">
+          <h3>Insights</h3>
+          <p class="intro-desc">
+            Our insights showed how young people with a hearing loss need support transitioning from medical care to
+            social
+            independence.
+            <br><br>
+            They seek relatable experiences, authentic information, and spaces that reduce stigma while
+            empowering them to take ownership of their hearing and well-being.
+          </p>
+        </div>
+        <div class="project-visual">
+          <img src="img/hoert-recap.png" class="project-modal__image" alt="">
+        </div>
+
+
+        <div class="project-visual">
+          <img src="img/design-sprint.JPEG" class="project-modal__image" alt="">
+        </div>
+        <div class="project-intro">
+
+          <h3>Design Sprint</h3>
+          <p class="intro-desc">
+            Following our research insights, we ran a Google Ventures Design Sprint to rapidly explore solutions.
+            Over the week, we ideated, prototyped, and tested concepts that addressed the needs we uncovered:
+            <br><br>
+            supporting young people in the transition from medical care to social independence, providing relatable
+            experiences,
+            authentic information, and safe spaces that reduce stigma.
+            <br><br>
+            The sprint helped us quickly translate insights into actionable ideas, ensuring the concept directly
+            empowers users to take ownership of their hearing and well-being.
+          </p>
+        </div>
+        <div class="project-visual">
+          <img src="img/design-sprint1.png" class="project-modal__image" alt="">
+        </div>
+        <div class="project-visual">
+          <img src="img/design-sprint2.png" class="project-modal__image" alt="">
+        </div>
+        <div class="project-intro">
+          <h3>Concept</h3>
+          <p class="intro-desc">
+            Building on our research and Design Sprint, the concept became an “Onboarding to Adulthood” experience.
+            After their final meeting with the client, users are introduced to the app Hørt, which supports young people
+            with hearing loss in taking ownership of their hearing and social life.
+            <br><br>
+            The key features included
+            <br><br>
+            Calendar reminders synced with hearing aid routines
+            <br><br>
+            Event notifications to connect with peers aged 18–25
+            <br><br>
+            Spaces to learn, confide, and share experiences
+            <br><br>
+            Hørt empowers users to transition from medical care to social independence in a structured, relatable, and
+            supportive way.
+          </p>
+        </div>
+        <div class="project-visual">
+          <img src="img/hoert-recap.png" class="project-modal__image" alt="">
+        </div>
+      </div>
     </div>
   </div>
 
+
+
+
+
+
+
+
+
+  <div class="project-modal" id="modal-horisont">
+    <div class="project-modal__backdrop"></div>
+
+    <div class="project-modal__sheet">
+      <div class="project-modal__close-container">
+        <button class="project-modal__close">
+          <span class="material-symbols-rounded">close</span>
+        </button>
+      </div>
+      <header class="modal-topbar nav-bar">
+        <div class="logo">CHARLOTTE<span class="brandmark">YDE</span></div>
+        <div class="location-time">
+          Copenhagen, Denmark, <span class="modal-clock"></span>
+        </div>
+        <div class="dark-toggle modalDarkToggle"></div>
+      </header>
+      <button class="project-modal__close">
+        <span class="material-symbols-rounded">close</span>
+      </button>
+
+      <div class="project-modal__content">
+        <div class="project-intro">
+          <p class="p2">Student Project 2025</p>
+          <p class="p2">Digital Concept Development</p>
+          <h2>HORISONT</h2>
+          <p class="intro-desc">
+            Our concept is based on insights showing that skilled workers aged 30-39 perceive pension as abstract and
+            overwhelming, despite having clear visions for their future life.
+            <br><br>
+            Due to limited mental capacity and the
+            long-term nature of pension planning, engagement is low and often only occurs during job changes.
+            <br><br>
+            Based on
+            this, we developed Horisont to help the target group understand the consequences of acting on their pension
+            today and take responsibility for their future.
+          </p>
+        </div>
+        <div class="project-visual">
+          <img src="img/horisont-pension.png" class="project-modal__image" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="project-modal" id="modal-whirl">
+    <div class="project-modal__backdrop"></div>
+    <div class="project-modal__sheet">
+      <div class="project-modal__close-container">
+        <button class="project-modal__close">
+          <span class="material-symbols-rounded">close</span>
+        </button>
+      </div>
+      <header class="modal-topbar nav-bar">
+        <div class="logo">CHARLOTTE<span class="brandmark">YDE</span></div>
+        <div class="location-time">
+          Copenhagen, Denmark, <span class="modal-clock"></span>
+        </div>
+        <div class="dark-toggle modalDarkToggle"></div>
+      </header>
+
+      <div class="project-modal__content">
+        <div class="project-intro">
+          <p class="p2">Final exam project 2025</p>
+          <p class="p2">Multimediadesign</p>
+          <h2>WHIRL</h2>
+          <p class="intro-desc">
+            Whirl is a Danish proof-of-concept app designed to support young adults with anxiety through planning tools,
+            a supportive chatbot, and evidence-based coping methods. 
+          <br><br>
+            Developed through extensive research and expert
+            collaboration, Whirl prioritizes empathy, ethics, accessibility, and user safety, offering a free,
+            culturally relevant supplement to professional treatment.
+          </p>
+        </div>
+        <div class="project-visual">
+          <img src="img/whirl-app 00.47.45.png" class="project-modal__image" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <section class="process">
+    <div class="process-info" id="processInfo"></div>
+
     <div class="process-image">
       <div class="process-image-wrapper">
         <img src="img/insight-img.png" alt="" id="processImg">
@@ -111,34 +304,41 @@
     <div class="process-text">
       <h2>Process approach</h2>
 
-      <h1 class="step">
-        <span data-img="img/mindmap.png"><span class="material-symbols-rounded arrow">
-            arrow_forward
-          </span>FROM PROBLEM</span>
+      <div class="step" data-info="Brainstorming and mapping out the problem space">
+        <div class="info-container"></div>
+        <div class="text-container">
+          <h1 class="step-title">FROM PROBLEM</h1>
+          <span class="material-symbols-rounded arrow">arrow_back</span>
+        </div>
+      </div>
 
-      </h1>
+      <div class="step" data-info="Insights derived from research">
+        <div class="info-container"></div>
+        <div class="text-container">
+          <h1 class="step-title">TO INSIGHT</h1>
+          <span class="material-symbols-rounded arrow">arrow_back</span>
+        </div>
+      </div>
 
-      <h1 class="step">
-        <span data-img="img/horisont-pension.png"><span class="material-symbols-rounded arrow">
-            arrow_forward
-          </span>TO
-          INSIGHT</span>
-
-      </h1>
-
-      <h1 class="step">
-        <span data-img="img/whirl-desktop.png"> <span class="material-symbols-rounded arrow">
-            arrow_forward
-          </span>TO
-          CONCEPT</span>
-
-      </h1>
+      <div class="step" data-info="Developing the concept and solution">
+        <div class="info-container"></div>
+        <div class="text-container">
+          <h1 class="step-title">TO CONCEPT</h1>
+          <span class="material-symbols-rounded arrow">arrow_back</span>
+        </div>
+      </div>
     </div>
+
+    <div class="push-arrow" aria-hidden="true">
+      <span class="material-symbols-rounded">arrow_back</span>
+    </div>
+
+
   </section>
 
   <section class="sections">
     <div class="work-header">
-      <h1>HI, I'M CHARLOTTE</h1>
+      <h1>HELLO</h1>
       <h2>Who am I?</h2>
     </div>
 
@@ -147,15 +347,28 @@
         <img src="img/me.jpg" class="me-img">
       </div>
       <div class="about-card">
-
-        <p>I work with insight-driven design strategies, transforming research and data into thoughtful UX structures
-          and digital concepts.</p>
+        <h3>
+          I'm Charlotte
+        </h3>
+        <p>
+          I transform problems into digital products that are clear, intuitive, and meaningful.
+          <br><br>
+          By combining research, strategy, and design, I create experiences that bridge complexity and clarity with a
+          focus on accessibility & sustainability.
+          I thrive in projects where strategy, iteration, and reflection drive every decision.
+          <br><br>
+          Fueled by coffee and
+          curiosity, I deliver insight-driven solutions that make a real impact.
+        </p>
 
       </div>
       <div class="about-card">
-        <h3>Horisont</h3>
-        <p>Digital concept for retirementDigital concept for retiremenDigital concept for retiremenDigital concept for
-          retiremen</p>
+        <h3>Experience</h3>
+        <p>I design digital experiences with a strong foundation in research, strategy, and multimedia design.
+          <br><br>Previously, I gained valuable leadership and problem-solving skills as a store manager, which now
+          inform how I
+          approach user-focused, meaningful products.
+        </p>
 
       </div>
 
@@ -165,12 +378,23 @@
 
 
   <!-- Contact Section -->
-  <section class="scroll-text-section">
-    <h2 class="animated-text">
-      <span>L</span><span>E</span><span>T</span><span>'</span><span>S</span>
-      <span></span><span></span><span>C</span><span>O</span><span>N</span><span>N</span><span>E</span><span>C</span><span>T</span>
-    </h2>
-  </section>
+  <footer class="site-footer">
+    <h1>LET’S CONNECT</h1>
+
+    <div class="footer-actions">
+      <a href="https://www.instagram.com/charlotteleayde/#" target="_blank" class="footer-btn">
+        Instagram
+      </a>
+
+      <a href="mailto:charlotteyde@outlook.dk" class="footer-btn">
+        Mail
+      </a>
+
+      <a href="https://www.linkedin.com/in/DIT_PROFILNAVN" target="_blank" class="footer-btn">
+        LinkedIn
+      </a>
+    </div>
+  </footer>
 
 
 
@@ -212,94 +436,33 @@
   </script>
 
   <script>
-
     const cards = document.querySelectorAll(".project-card");
-    const modal = document.getElementById("modalOverlay");
-
-    const modalImage = document.getElementById("modalImage");
-    const modalTitle = document.getElementById("modalTitle");
-    const modalDesc = document.getElementById("modalDesc");
-    const modalYear = document.getElementById("modalYear");
-    const modalLongDesc = document.getElementById("modalLongDesc");
-    const modalTags = document.getElementById("modalTags");
-    const modalGallery = document.getElementById("modalGallery");
-    const modalVideo = document.getElementById("modalVideo");
-    const modalLink = document.getElementById("modalLink");
-
-    const closeModal = document.getElementById("closeModal");
+    const modals = document.querySelectorAll(".project-modal");
 
     cards.forEach(card => {
       card.addEventListener("click", () => {
+        const modalId = card.dataset.modal;
+        const modal = document.getElementById(modalId);
 
-        // Basic info
-        modalTitle.textContent = card.dataset.title || "";
-        modalDesc.textContent = card.dataset.desc || "";
-        modalYear.textContent = card.dataset.year || "";
-        modalLongDesc.textContent = card.dataset.longdesc || "";
-        modalTags.textContent = card.dataset.tags || "";
-
-        // Main image
-        modalImage.src = card.dataset.img || "";
-
-        // Link
-        modalLink.style.display = card.dataset.link ? "inline-block" : "none";
-        modalLink.href = card.dataset.link || "#";
-
-        // Gallery
-        modalGallery.innerHTML = "";
-        if (card.dataset.gallery) {
-          const images = card.dataset.gallery.split(",");
-          images.forEach(src => {
-            const img = document.createElement("img");
-            img.src = src.trim();
-            img.style.width = "100%";
-            img.style.borderRadius = "12px";
-            img.style.marginTop = "10px";
-            modalGallery.appendChild(img);
-          });
+        if (modal) {
+          modal.classList.add("open");
+          document.body.style.overflow = "hidden";
         }
-
-        // Video
-        if (card.dataset.video) {
-          modalVideo.src = card.dataset.video;
-          modalVideo.style.display = "block";
-        } else {
-          modalVideo.style.display = "none";
-        }
-
-        modal.style.display = "flex";
       });
     });
 
-    // Close
-    closeModal.addEventListener("click", () => modal.style.display = "none");
-    modal.addEventListener("click", e => {
-      if (e.target === modal) modal.style.display = "none";
-    });
-    cards.forEach(card => {
-      card.addEventListener("click", () => {
-        // Fill modal content...
+    modals.forEach(modal => {
+      const closeBtn = modal.querySelector(".project-modal__close");
+      const backdrop = modal.querySelector(".project-modal__backdrop");
 
-        modal.style.display = "flex";
-
-        // Prevent background scroll
-        document.body.style.overflow = "hidden";
-      });
-    });
-
-    // Close modal
-    closeModal.addEventListener("click", () => {
-      modal.style.display = "none";
-      document.body.style.overflow = ""; // Restore scroll
-    });
-
-    modal.addEventListener("click", e => {
-      if (e.target === modal) {
-        modal.style.display = "none";
-        document.body.style.overflow = ""; // Restore scroll
+      function close() {
+        modal.classList.remove("open");
+        document.body.style.overflow = "";
       }
-    });
 
+      closeBtn.addEventListener("click", close);
+      backdrop.addEventListener("click", close);
+    });
 
     // HERO LOGO SCROLL EFFECT
     const heroLogo = document.getElementById("heroLogo");
@@ -311,10 +474,16 @@
       heroLogo.style.transform = `translate(-50%, calc(-50% + ${scrollY * speed}px))`;
     });
 
-    const theme = localStorage.getItem("theme");
-    if (theme === "dark") {
-      document.body.classList.add("dark");
-    }
+    document.querySelectorAll(".modalDarkToggle").forEach(toggle => {
+      toggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        localStorage.setItem(
+          "theme",
+          document.body.classList.contains("dark") ? "dark" : "light"
+        );
+      });
+    });
+
 
 
     const animatedSpans = document.querySelectorAll('.animated-text span');
@@ -324,21 +493,21 @@
 
     window.addEventListener('scroll', () => {
       const sectionTop = section.getBoundingClientRect().top;
-      const sectionHeight = section.offsetHeight;
       const windowHeight = window.innerHeight;
 
       letters.forEach((letter, index) => {
-        // The factor controls how fast each letter moves
-        const speedFactor = 1 + index * 0; // stagger speed per letter
+        // Slide in from the right with a parallax lag
+        const depth = 1 + index * 0.06;
 
-        // Calculate progress: 0 = section bottom offscreen, 1 = section top at viewport top
-        let progress = (windowHeight - sectionTop) / (windowHeight + sectionHeight);
-        progress = Math.min(Math.max(progress, 0), 1); // clamp between 0 and 1
+        // Progress: 0 when section bottom is at bottom of viewport,
+        // 1 when section top hits top of viewport (ensures full travel)
+        let progress = 1 - sectionTop / windowHeight;
+        progress = Math.min(Math.max(progress, 0), 1);
 
-        const maxOffset = 80; // start offscreen
-        const translateX = Math.max(maxOffset * (1 - progress * speedFactor), 0);
-        letter.style.transform = `translateX(${translateX}vw)`;
-        letter.style.opacity = progress; // fade in with scroll
+        const maxOffsetX = window.innerWidth * 0.8; // start off to the right
+        const translateX = Math.max(maxOffsetX * (1 - progress * depth), 0);
+        letter.style.transform = `translateX(${translateX}px)`;
+        letter.style.opacity = progress;
       });
     });
 
@@ -376,19 +545,71 @@
 
   <script>
     const steps = document.querySelectorAll('.step');
+    const processSection = document.querySelector('.process');
+    const processInfo = document.getElementById('processInfo');
 
     steps.forEach(step => {
       step.addEventListener('click', () => {
-        steps.forEach(s => s.classList.remove('active'));
+        // Remove active from all
+        steps.forEach(s => {
+          s.classList.remove('active');
+        });
+
+        // Activate clicked step
         step.classList.add('active');
 
-        // Hvis du vil bruge data-img senere:
-        const img = step.querySelector('span[data-img]')?.dataset.img;
-        console.log(img);
+        // Update shared info panel on the left
+        const infoText = step.dataset.info;
+        if (infoText && processInfo) {
+          processInfo.innerHTML = `<h3>${infoText}</h3>`;
+          processInfo.style.opacity = '1';
+          processInfo.style.transform = 'translateY(-50%)';
+        }
+
+        // Trigger the arrow push animation
+        if (processSection) {
+          processSection.classList.remove('pushing'); // restart animation
+          void processSection.offsetWidth; // force reflow
+          processSection.classList.add('pushing');
+        }
       });
     });
-  </script>
 
+    const modalToggle = document.getElementById("modalDarkToggle");
+
+    modalToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+
+      // Gem tema i localStorage
+      if (document.body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+      } else {
+        localStorage.setItem("theme", "light");
+      }
+    });
+
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      function updateModalClocks() {
+        const now = new Date();
+        const time = new Intl.DateTimeFormat("en-GB", {
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+          timeZone: "Europe/Copenhagen"
+        }).format(now);
+
+        document.querySelectorAll(".modal-clock").forEach(clock => {
+          clock.innerText = time;
+        });
+      }
+
+      setInterval(updateModalClocks, 1000);
+      updateModalClocks();
+    });
+
+  </script>
 </body>
 
 </html>
