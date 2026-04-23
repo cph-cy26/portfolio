@@ -325,70 +325,6 @@
     </div>
   </div>
 
-  <!-- PROCESS -->
-
-  <section class="process">
-    <div class="process-left">
-      <div class="process-image">
-        <div class="process-image-wrapper">
-          <img src="img/whirl-desktop.png" alt="" id="processImg">
-        </div>
-      </div>
-      <div class="process-info" id="processInfo"></div>
-    </div>
-    <div class="process-text">
-      <h2>Focus areas</h2>
-
-      <div class="step"
-        data-info="My focus is user insight to understand context, challenges and underlying needs and define real problems that connect user behaviour with business value."
-        data-img="img/workshop.png">
-        <div class="text-container">
-          <h1 class="step-title">USER INSIGHT
-          </h1>
-        </div>
-        <div class="step-mobile-image">
-          <img src="img/workshop.png" alt="">
-        </div>
-        <div class="step-mobile-info">
-          <p>My focus is user insight to understand context, challenges and underlying needs and define real problems
-            that connect user behaviour with business value.
-          </p>
-        </div>
-      </div>
-
-      <div class="step" data-info="I use concept development to translate and validate user insights into clear digital solutions that connect
-        user needs with product direction and solve real problems." data-img="img/design-sprint.JPEG">
-        <div class="text-container">
-          <h1 class="step-title">CONCEPT</h1>
-        </div>
-        <div class="step-mobile-image">
-          <img src="img/design-sprint.JPEG" alt="">
-        </div>
-        <div class="step-mobile-info">
-          <p>I use concept development to translate and validate user insights into clear digital solutions that connect
-            user needs with product direction and solve real problems. </p>
-        </div>
-      </div>
-
-      <div class="step"
-        data-info="I focus on value creation by ensuring digital solutions are usable, relevant and aligned with both user needs and product goals."
-        data-img="img/horisont-pension.png">
-        <div class="text-container">
-          <h1 class="step-title">VALUE CREATION</h1>
-        </div>
-        <div class="step-mobile-image">
-          <img src="img/horisont-pension.png" alt="">
-        </div>
-        <div class="step-mobile-info">
-          <p>I focus on value creation by ensuring digital solutions are usable, relevant and aligned with both user
-            needs and product goals.
-          </p>
-        </div>
-      </div>
-    </div>
-
-
-  </section>
 
 
   <section class="sections">
@@ -406,21 +342,53 @@
           I'm Charlotte
         </h3>
         <p>
-          I transform complex problems into clear, intuitive digital products. By combining research, strategy and
-          design, I create experiences that bridge complexity and clarity with a focus on accessibility and
-          sustainability.</p>
+          From the retail floor to the digital screen. My journey began in retail leadership, where I learned to
+          anticipate customer needs before they even realized them. I bring that same strategic intuition into the
+          digital space, where I believe the best solutions live at the intersection of razor-sharp aesthetics and hard
+          logic.
           <br><br>
-          <h3>Experience</h3>
-          <p>My background in retail leadership gave me a strong understanding of customer behaviour, sales performance
-            and operational decision-making. Today, I apply that mindset to digital product development—creating solutions
-            that are both user-centered and strategically valuable.
+          I obsess over the details, accessibility, and deep user insights—ideally powered by freshly roasted coffee.
+          While I love the craft of design, my real passion is the collaboration. I thrive in team environments,
+          believing that the most intuitive, human-centric products are born when we bridge complexity through shared
+          perspective.
         </p>
-
       </div>
       <div class="about-card">
+        <h3>Experience</h3>
+        <div class="timeline">
 
-     
+          <div class="timeline-item">
+            <span class="dot"></span>
+            <div class="timeline-content">
+              <p class="title">2025 – Now</p>
+              <p class="desc">Digital Concept Development Student</p>
+            </div>
+          </div>
 
+          <div class="timeline-item">
+            <span class="dot"></span>
+            <div class="timeline-content">
+              <p class="title">2023 – 2025</p>
+              <p class="desc">Multimediadesign Student</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="dot"></span>
+            <div class="timeline-content">
+              <p class="title">Jan 2025 – Mar 2025</p>
+              <p class="desc">Digital Product Design Intern, Topdanmark</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <span class="dot"></span>
+            <div class="timeline-content">
+              <p class="title">2020 – 2023</p>
+              <p class="desc">Store Manager, Matas A/S</p>
+            </div>
+          </div>
+
+        </div>
       </div>
 
     </div>
@@ -430,20 +398,11 @@
 
   <!-- Contact Section -->
   <footer class="site-footer">
-    <h1>LET'S CONNECT</h1>
-
-    <div class="footer-actions">
-      <a href="https://www.instagram.com/charlotteleayde/#" target="_blank" class="footer-btn">
-        Instagram
-      </a>
-
-      <a href="mailto:charlotteyde@outlook.dk" class="footer-btn">
-        Mail
-      </a>
-
-      <a href="https://www.linkedin.com/in/DIT_PROFILNAVN" target="_blank" class="footer-btn">
-        LinkedIn
-      </a>
+    <div class="footer-head">
+      <p class="footer-kicker">WORK WITH ME</p>
+      <p class="footer-head-email">
+        <a href="mailto:charlotteyde@outlook.dk">charlotteyde@outlook.dk</a>
+      </p>
     </div>
   </footer>
 
@@ -566,10 +525,7 @@
 
   <script>
     const steps = document.querySelectorAll('.step');
-    const processSection = document.querySelector('.process');
     const processInfo = document.getElementById('processInfo');
-    const processLeft = document.querySelector('.process-left');
-    const processImage = document.querySelector('.process-image');
     const processImg = document.getElementById('processImg');
 
     let activeStep = null;
@@ -583,44 +539,16 @@
       // Activate this step
       step.classList.add('active');
 
-      // Update image source based on step with smooth animation
+      // Update image source without movement/slide effects
       const imgSrc = step.dataset.img;
       if (imgSrc && processImg) {
-        // Remove animation class if it exists
-        processImg.classList.remove('fade-slide-in');
-        // Force reflow to reset animation
-        void processImg.offsetWidth;
-        // Update image source
         processImg.src = imgSrc;
-        // Add animation class for smooth transition
-        processImg.classList.add('fade-slide-in');
       }
 
-      // Update shared info panel on the left with smooth animation
+      // Update shared info panel on the left
       const infoText = step.dataset.info;
       if (infoText && processInfo) {
-        // Remove animation class if it exists
-        processInfo.classList.remove('fade-slide-in');
-        // Force reflow to reset animation
-        void processInfo.offsetWidth;
-        // Update content
-        processInfo.innerHTML = `<h3>${infoText}</h3>`;
-        // Add animation class for smooth transition (transform handled by animation)
-        processInfo.classList.add('fade-slide-in');
-      }
-
-      // Trigger the arrow push animation
-      if (processSection) {
-        processSection.classList.remove('pushing'); // restart animation
-        void processSection.offsetWidth; // force reflow
-        processSection.classList.add('pushing');
-      }
-
-      // Subtle vertical alignment of image + text with active step
-      if (processLeft && steps.length > 0) {
-        const index = Array.from(steps).indexOf(step);
-        const offset = Math.max(index, 0) * 32; // px offset per step
-        processLeft.style.transform = `translateY(${offset}px)`;
+        processInfo.innerHTML = `<p>${infoText}</p>`;
       }
     }
 
@@ -637,23 +565,15 @@
         applyStepState(activeStep);
       });
 
-      // Temporary activation on hover
+      // Temporary preview on hover without layout movement
       step.addEventListener('mouseenter', () => {
         applyStepState(step);
-        // Slide image up on hover (desktop only)
-        if (processImage && window.innerWidth > 768) {
-          processImage.classList.add('slide-up');
-        }
       });
 
-      // Restore last clicked (active) after hover ends
+      // Restore last clicked state when hover ends
       step.addEventListener('mouseleave', () => {
         if (activeStep) {
           applyStepState(activeStep);
-        }
-        // Remove slide-up effect
-        if (processImage) {
-          processImage.classList.remove('slide-up');
         }
       });
     });
@@ -692,6 +612,27 @@
       updateModalClocks();
     });
 
+  </script>
+
+  <script>
+    const items = document.querySelectorAll('.timeline-item');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          items.forEach((item, index) => {
+            setTimeout(() => {
+              item.classList.add('show');
+            }, index * 200); // delay between each item
+          });
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    const timeline = document.querySelector('.timeline');
+    observer.observe(timeline);
   </script>
 </body>
 
