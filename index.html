@@ -20,9 +20,11 @@
     <div class="location-time">
       Copenhagen, Denmark, <span id="clock"></span>
     </div>
-    <div id="darkToggle" class="dark-toggle pulsing">
-
+    <div id="darkToggle" class="dark-toggle">
+   
     </div>
+
+
   </header>
 
   <section class="hero" id="hero">
@@ -96,7 +98,7 @@
       </header>
 
 
-      <div class="project-modal__content">
+      <div class="project-modal__content ">
         <div class="project-intro">
           <h2>HØRT</h2>
           <p class="intro-desc">
@@ -104,22 +106,46 @@
             hearing loss take ownership of their hearing health through a clear, accessible and behaviorally informed
             digital experience.
           </p>
-          <div class="project-visual modal-value-cards">
-            <div class="modal-value-card">
-              <h4>Role</h4>
-              <p>Project lead, research, UX & concept development</p>
+          <div class="project-timeline-horizontal">
+  
+            <div class="timeline-step">
+              <span class="dot"></span>
+              <div class="step-content">
+                <h4>Role</h4>
+                <p>Project lead
+                  <br>
+                  Research
+                  <br>
+                  UX design
+                  <br>
+                  Concept Development</p>
+              </div>
             </div>
-            <div class="modal-value-card">
-              <h4>Type</h4>
-              <p>Student Project, 2025
-                Concept Development
-              </p>
-
+          
+            <div class="timeline-step">
+              <span class="dot"></span>
+              <div class="step-content">
+                <h4>Type</h4>
+                <p>
+                  
+                  <br>
+                  Student Project, 2025
+                  <br>
+                  Digital Concept Development</p>
+              </div>
             </div>
-            <div class="modal-value-card">
-              <h4>Approach</h4>
-              <p>Design Sprint (Google Ventures)</p>
+          
+            <div class="timeline-step">
+              <span class="dot"></span>
+              <div class="step-content">
+                <h4>Approach</h4>
+                <p>Design Sprint (Google Ventures)
+                  <br>
+                  Agile & Iterative process
+                </p>
+              </div>
             </div>
+          
           </div>
         </div>
         <div class="project-visual">
@@ -494,89 +520,9 @@
       });
     });
 
-
-
-    const animatedSpans = document.querySelectorAll('.animated-text span');
-
-    const letters = document.querySelectorAll('.animated-text span');
-    const section = document.querySelector('.scroll-text-section');
-
-    window.addEventListener('scroll', () => {
-      const sectionTop = section.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-
-      letters.forEach((letter, index) => {
-        // Slide in from the right with a parallax lag
-        const depth = 1 + index * 0.06;
-
-        // Progress: 0 when section bottom is at bottom of viewport,
-        // 1 when section top hits top of viewport (ensures full travel)
-        let progress = 1 - sectionTop / windowHeight;
-        progress = Math.min(Math.max(progress, 0), 1);
-
-        const maxOffsetX = window.innerWidth * 0.8; // start off to the right
-        const translateX = Math.max(maxOffsetX * (1 - progress * depth), 0);
-        letter.style.transform = `translateX(${translateX}px)`;
-        letter.style.opacity = progress;
-      });
-    });
-
   </script>
 
   <script>
-    const steps = document.querySelectorAll('.step');
-    const processInfo = document.getElementById('processInfo');
-    const processImg = document.getElementById('processImg');
-
-    let activeStep = null;
-
-    function applyStepState(step) {
-      if (!step) return;
-
-      // Remove active from all
-      steps.forEach(s => s.classList.remove('active'));
-
-      // Activate this step
-      step.classList.add('active');
-
-      // Update image source without movement/slide effects
-      const imgSrc = step.dataset.img;
-      if (imgSrc && processImg) {
-        processImg.src = imgSrc;
-      }
-
-      // Update shared info panel on the left
-      const infoText = step.dataset.info;
-      if (infoText && processInfo) {
-        processInfo.innerHTML = `<p>${infoText}</p>`;
-      }
-    }
-
-    // Initialize: make "Problem" (first step) active on page load
-    if (steps.length > 0) {
-      activeStep = steps[0];
-      applyStepState(activeStep);
-    }
-
-    steps.forEach(step => {
-      // Permanent activation on click
-      step.addEventListener('click', () => {
-        activeStep = step;
-        applyStepState(activeStep);
-      });
-
-      // Temporary preview on hover without layout movement
-      step.addEventListener('mouseenter', () => {
-        applyStepState(step);
-      });
-
-      // Restore last clicked state when hover ends
-      step.addEventListener('mouseleave', () => {
-        if (activeStep) {
-          applyStepState(activeStep);
-        }
-      });
-    });
 
     const modalToggle = document.getElementById("modalDarkToggle");
 
@@ -634,6 +580,8 @@
     const timeline = document.querySelector('.timeline');
     observer.observe(timeline);
   </script>
+
+  
 </body>
 
 </html>
