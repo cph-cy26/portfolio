@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta id="themeColorMeta" name="theme-color" content="#ffffff" />
   <link id="favicon" rel="icon" href="img/favicon-dark.png">
   <title>Charlotte Yde</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -21,7 +22,7 @@
       Copenhagen, Denmark, <span id="clock"></span>
     </div>
     <div id="darkToggle" class="dark-toggle">
-   
+
     </div>
 
 
@@ -33,7 +34,7 @@
       <span class="brandmark-hero">YDE</span>
     </div>
     <p>Digital Product Designer & Concept Developer.
-      <br>
+      <br class="hero-mobile-break">
       I turn user insight into digital products that create value.
     </p>
   </section>
@@ -55,164 +56,147 @@
 
         <img src="img/hoert-app.png" alt="">
         <h3>Hørt</h3>
-        <p>Digital concept for young people with a hearing loss</p>
-        <p>Student project, 2025</p>
+        <p>Reframing hearing health for a young generation</p>
+        <p class="card-meta">Student project, 2025</p>
       </div>
 
       <div class="project-card" data-modal="modal-horisont" data-title="Horisont"
         data-desc="Digital concept for retirement. Student project, 2025.">
         <img src="img/horisont.app.png" alt="">
         <h3>Horisont</h3>
-        <p>Digital concept for retirement</p>
-        <p>Student project, 2025</p>
+        <p>Designing retirement with clarity and calm</p>
+        <p class="card-meta">Student project, 2025</p>
       </div>
 
       <div class="project-card" data-modal="modal-whirl" data-title="Whirl"
         data-desc="Digital tool for anxiety management. Final exam project, 2025.">
         <img src="img/whirl-app.png" alt="">
         <h3>Whirl</h3>
-        <p>Digital tool for anxiety management</p>
-        <p>Final exam project, 2025</p>
+        <p>A quiet companion for moments of anxiety</p>
+        <p class="card-meta">Final exam project, 2025</p>
       </div>
     </div>
   </section>
 
 
-
-
+  <!--HØRT PROJEKT-->
   <div class="project-modal" id="modal-hoert">
     <div class="project-modal__backdrop"></div>
+    <button class="project-modal__close" aria-label="Close">
+      <span class="material-symbols-rounded">close</span>
+    </button>
+
     <div class="project-modal__sheet">
-      <div class="project-modal__close-container">
-        <button class="project-modal__close">
-          <span class="material-symbols-rounded">close</span>
-        </button>
-      </div>
+      <div class="drag-pill" role="button" aria-label="Drag to dismiss" tabindex="0"></div>
+      <div class="project-modal__content">
+        <!-- HERO -->
 
-      <header class="modal-topbar nav-bar">
-        <div class="logo">CHARLOTTE<span class="brandmark">YDE</span></div>
-        <div class="location-time">
-          Copenhagen, Denmark, <span class="modal-clock"></span>
-        </div>
-        <div class="dark-toggle modalDarkToggle"></div>
-      </header>
+        <div class="project-intro--hero">
+          <div class="meta-row">
+            <span class="tag">UX Design</span>
+            <span class="tag">Concept development</span>
+            <span class="tag">2025</span>
+          </div>
 
-
-      <div class="project-modal__content ">
-        <div class="project-intro">
           <h2>HØRT</h2>
           <p class="intro-desc">
-            A digital concept developed within a client-defined problem space, designed to help young people with
-            hearing loss take ownership of their hearing health through a clear, accessible and behaviorally informed
-            digital experience.
+            HØRT is a digital concept developed within a client-defined problem space, designed to help young people
+            with hearing loss take ownership of their hearing health through a clear, accessible and informed digital
+            experience.
           </p>
-          <div class="project-timeline-horizontal">
-  
-            <div class="timeline-step">
-              <span class="dot"></span>
-              <div class="step-content">
-                <h4>Role</h4>
-                <p>Project lead
-                  <br>
-                  Research
-                  <br>
-                  UX design
-                  <br>
-                  Concept Development</p>
-              </div>
+
+          <!-- Stats row replacing old timeline -->
+          <div class="stats-row">
+            <div class="stat">
+              <p class="stat-label">Role</p>
+              <p class="stat-val">Project Lead<br>UX Design<br>Concept Development</p>
             </div>
-          
-            <div class="timeline-step">
-              <span class="dot"></span>
-              <div class="step-content">
-                <h4>Type</h4>
-                <p>
-                  
-                  <br>
-                  Student Project, 2025
-                  <br>
-                  Digital Concept Development</p>
-              </div>
+            <div class="stat">
+              <p class="stat-label">Type</p>
+              <p class="stat-val">Client Center for Hørelse & Balance<br>Student Project</p>
             </div>
-          
-            <div class="timeline-step">
-              <span class="dot"></span>
-              <div class="step-content">
-                <h4>Approach</h4>
-                <p>Design Sprint (Google Ventures)
-                  <br>
-                  Agile & Iterative process
-                </p>
-              </div>
+            <div class="stat">
+              <p class="stat-label">Approach</p>
+              <p class="stat-val">Design Sprint<br>Agile Process</p>
             </div>
-          
           </div>
         </div>
         <div class="project-visual">
-          <img src="img/hoert-app.png" class="project-modal__image" alt="">
+          <img src="img/hoert-recap.png" class="project-visual" alt="Workshop" loading="lazy">
+        </div>
+
+
+
+        <!-- Problem -->
+        <div class="project-intro" data-section="01 — Problem">
+          <h3>Taking ownership is hard</h3>
+          <p class="intro-desc">
+            Transitioning to adulthood at 18, young people with hearing loss are suddenly left to navigate the
+            healthcare system on their own, requiring them to take full initiative for their own hearing care.
+            <br><br>
+            This
+            shift occurs during a vulnerable life stage where taking responsibility for a chronic condition can feel
+            overwhelming. Furthermore, many struggle with the social stigma or insecurity of communicating their hearing
+            needs to peers.
+          </p>
         </div>
 
         <div class="project-visual">
-          <img src="img/workshop.png" class="project-modal__image" alt="">
+          <img src="img/design-sprint3.png" class="project-modal__image" alt="Workshop" loading="lazy">
         </div>
-        <div class="project-intro">
 
-          <h3>Problem</h3>
+        <!-- Insights -->
+        <div class="project-visual">
+          <img src="img/design-sprint.JPEG" class="project-modal__image" alt="Empathy map" loading="lazy">
+        </div>
+        <div class="project-intro" data-section="02 — Insights">
+          <h3>What we found</h3>
           <p class="intro-desc">
-            Young people with hearing loss often struggle with understanding and taking ownership of their hearing
-            health, and may feel uncomfortable or uncertain about how to talk about their condition.
+            The transition to adulthood often leaves young people with hearing loss without a vital safety net. To
+            foster ownership of their well-being and reduce social stigma, there is a critical need for relatable
+            experiences, trustworthy information, and safe spaces.
             <br><br>
-            Through research, we identified a lack of accessible and relatable tools that support both awareness and
-            open dialogue around hearing health in this target group.
-
+            Our research reveals a significant gap: a lack of
+            accessible tools designed to facilitate awareness and open dialogue within this specific demographic.
           </p>
         </div>
 
 
-        <div class="project-intro">
-          <h3>Insights</h3>
+        <!-- Concept -->
+        <div class="project-intro" data-section="03 — Concept">
+          <h3>Onboarding to adulthood</h3>
           <p class="intro-desc">
-            The transition from medical care to independent life leaves young people with hearing loss without the
-            support they need.
-            <br><br>
-            Relatable experiences, trustworthy information and safe spaces are key to reducing stigma and enabling
-            ownership of their hearing and well-being.
-          </p>
-        </div>
-        <div class="project-visual">
-          <img src="img/hoert-recap.png" class="project-modal__image" alt="">
-        </div>
-
-
-        <div class="project-visual">
-          <img src="img/design-sprint.JPEG" class="project-modal__image" alt="">
-        </div>
-
-        <div class="project-visual">
-          <img src="img/design-sprint1.png" class="project-modal__image" alt="">
-        </div>
-        <div class="project-visual">
-          <img src="img/design-sprint2.png" class="project-modal__image" alt="">
-        </div>
-        <div class="project-intro">
-          <h3>Concept & Approach</h3>
-          <p class="intro-desc">
-            Building on our research, the concept evolved into an “Onboarding to Adulthood” experience. After their
-            final meeting, users are introduced to the app HØRT, designed to support young people with hearing loss in
+            Building on our research, the concept evolved into an "Onboarding to Adulthood" experience. After their
+            final meeting, users are introduced to HØRT, designed to support young people with hearing loss in
             taking ownership of their hearing and social life.
-            <br><br>
-            Key features include:
-            <br><br>
-            Calendar reminders synced with hearing aid routines <br>
-            Event notifications to connect with peers aged 18–25 <br>
-            Safe spaces to learn, share experiences and reduce stigma
             <br><br>
             The concept supports the transition from medical care to independent everyday life in a structured and
             relatable way.
           </p>
         </div>
-        <div class="project-intro">
-          <h3>Solution</h3>
+        <div class="project-visual">
+          <!-- Feature cards — span full width, slide in on scroll -->
+          <div class="feature-cards js-feature-cards">
+            <div class="feature-card">
+              <h4>Routines</h4>
+              <p>Calendar reminders synced with hearing aid routines — so nothing gets forgotten.</p>
+            </div>
+            <div class="feature-card">
+             
+              <h4>Community</h4>
+              <p>Event notifications to connect with peers aged 18–25 who get it.</p>
+            </div>
+            <div class="feature-card">
+              
+              <h4>Safe spaces</h4>
+              <p>Places to learn, share experiences and reduce the stigma around hearing health.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Solution + outcome cards spanning full width -->
+        <div class="project-intro solution-section" data-section="04 — Solution">
+
+          <h3>The app</h3>
           <p class="intro-desc">
             The solution was designed as a mobile app experience supporting young people with hearing loss in their
             transition to independent everyday life.
@@ -220,88 +204,200 @@
             The app combines practical tools with social features, allowing users to manage their hearing routines,
             connect with peers, and access relatable information in one place.
           </p>
-        </div>
-        <div class="project-visual">
-          <img src="img/hoert-recap.png" class="project-modal__image" alt="">
-        </div>
-        <div class="project-intro">
-          <h3>Value</h3>
-          <p class="intro-desc">
-            The concept creates value by supporting users in taking ownership of their hearing in a more independent and
-            confident way.
-            <br><br>
-            By combining practical tools with relatable experiences, the solution reduces stigma and makes hearing
-            health a more natural part of everyday life.
-          </p>
-        </div>
-        <div class="project-visual modal-value-cards">
-          <div class="modal-value-card">
-            <h4>Ownership</h4>
-            <p>Users gain structure for daily hearing routines and feel more in control.</p>
-          </div>
-          <div class="modal-value-card">
-            <h4>Connection</h4>
-            <p>Peer-focused events and shared experiences reduce isolation.</p>
-          </div>
-          <div class="modal-value-card">
-            <h4>Confidence</h4>
-            <p>Relatable information and safe spaces help normalize hearing health.</p>
+
+          <div class="outcome-cards">
+            <div class="outcome-card">
+              <h4>Ownership</h4>
+              <p>Users gain structure for daily hearing routines and feel more in control.</p>
+            </div>
+            <div class="outcome-card">
+              <h4>Connection</h4>
+              <p>Peer-focused events and shared experiences reduce isolation.</p>
+            </div>
+            <div class="outcome-card">
+              <h4>Confidence</h4>
+              <p>Relatable information and safe spaces help normalise hearing health.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+
+        <div class="project-visual solution-section">
+          <img src="img/hoert-recap.png" class="project-modal__image" style="max-width: 100%;" alt="HØRT recap"
+            loading="lazy">
+        </div>
+
+      </div><!-- end .project-modal__content -->
+    </div><!-- end .project-modal__sheet -->
   </div>
 
 
 
 
 
-
-
-
-
+  <!--HORISONT PROJEKT-->
   <div class="project-modal" id="modal-horisont">
     <div class="project-modal__backdrop"></div>
+    <button class="project-modal__close" aria-label="Close">
+      <span class="material-symbols-rounded">close</span>
+    </button>
 
     <div class="project-modal__sheet">
-      <div class="project-modal__close-container">
-        <button class="project-modal__close">
-          <span class="material-symbols-rounded">close</span>
-        </button>
-      </div>
-      <header class="modal-topbar nav-bar">
-        <div class="logo">CHARLOTTE<span class="brandmark">YDE</span></div>
-        <div class="location-time">
-          Copenhagen, Denmark, <span class="modal-clock"></span>
-        </div>
-        <div class="dark-toggle modalDarkToggle"></div>
-      </header>
-      <button class="project-modal__close">
-        <span class="material-symbols-rounded">close</span>
-      </button>
-
+      <div class="drag-pill" role="button" aria-label="Drag to dismiss" tabindex="0"></div>
       <div class="project-modal__content">
-        <div class="project-intro">
-          <p class="p2">Student Project, 2025</p>
-          <p class="p2">Digital Concept Development</p>
+        <!-- HERO -->
+
+        <div class="project-intro--hero">
+          <div class="meta-row">
+            <span class="tag">Concept development</span>
+            <span class="tag">Figma make</span>
+            <span class="tag">2025</span>
+          </div>
+
           <h2>HORISONT</h2>
           <p class="intro-desc">
-            Our concept is based on insights showing that skilled workers aged 30-39 perceive pension as abstract and
-            overwhelming, despite having clear visions for their future life.
+            Horisont is a web-based tool designed to transform pension planning from a distant obligation into an
+            engaging priority for the younger generation. By simplifying complex data, Horisont empowers users to
+            visualize their future self.
+          </p>
+
+          <!-- Stats row replacing old timeline -->
+          <div class="stats-row">
+            <div class="stat">
+              <p class="stat-label">Role</p>
+              <p class="stat-val">UI Design <br> UX research
+              </p>
+            </div>
+            <div class="stat">
+              <p class="stat-label">Type</p>
+              <p class="stat-val">Client Forte Advice // F&P<br>Student Project</p>
+            </div>
+            <div class="stat">
+              <p class="stat-label">Approach</p>
+              <p class="stat-val">Interviews<br>Figma Make</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-visual">
+          <img src="img/horisont-pension.png" class="project-visual" alt="Workshop" loading="lazy">
+        </div>
+
+
+
+        <!-- Problem -->
+        <div class="project-intro" data-section="01 — Problem">
+          <h3>Lack of interest in the future</h3>
+          <p class="intro-desc">
+            The Danish pension industry manages 4.5 trillion DKK, yet consumer engagement and trust remain critically
+            low. Most people lack insight into their savings and the long-term consequences of inaction, leading to
+            future financial insecurity.
             <br><br>
-            Due to limited mental capacity and the
-            long-term nature of pension planning, engagement is low and often only occurs during job changes.
+            This project explores how to bridge the gap between providers and
+            policyholders, empowering Danes to take ownership of their pension and understand the urgency of acting
+            today.
+          </p>
+        </div>
+
+        <div class="project-visual">
+          <img src="img/research.png" class="project-modal__image" alt="Workshop" loading="lazy">
+        </div>
+
+        <!-- Insights -->
+        <div class="project-visual">
+          <img src="img/koncept.png" class="project-modal__image" alt="Empathy map" loading="lazy">
+        </div>
+        <div class="project-intro" data-section="02 — Insights">
+          <h3>What we found</h3>
+          <p class="intro-desc">
+            Target Group: Danes aged 30–39, with a focus on skilled workers.
+            While this group shared vivid dreams of retirement - ranging from rural tranquility to global travel - there
+            is a profound disconnect between their aspirations and their actions. Our research showed that while they
+            value financial freedom and security, pension planning remains an abstract and overwhelming task.
             <br><br>
-            Based on
-            this, we developed Horisont to help the target group understand the consequences of acting on their pension
-            today and take responsibility for their future.
+            The primary "pain point" is the gap between knowledge and action: in a life stage dominated by immediate
+            priorities, long-term financial planning is sidelined. The result is a persistent sense of uncertainty about
+            whether their current path will actually lead to the retirement they imagine.
+          </p>
+        </div>
+
+
+        <!-- Concept -->
+        <div class="project-intro" data-section="03 — Concept">
+          <h3>A look into the future</h3>
+          <p class="intro-desc">
+            Our proposed concept focused on transforming pension planning into a visual and intuitive experience to
+            increase user engagement. By utilizing gamification, we stripped away the formal complexity of the industry,
+            making the impact of today's decisions immediately tangible. To ensure relevance, the communication
+            addressed real-life concerns such as physical strain and early retirement.
+            <br><br>
+            We recommended creating a "safe space" for learning, characterized by accessible language and a low barrier
+            to entry, ensuring that all users - regardless of professional background -felt empowered to take charge of
+            their financial future.
           </p>
         </div>
         <div class="project-visual">
-          <img src="img/horisont-pension.png" class="project-modal__image" alt="">
+          <!-- Feature cards — span full width, slide in on scroll -->
+          <div class="feature-cards js-feature-cards">
+            <div class="feature-card">
+              
+              <h4>Gamified Visualization</h4>
+              <p>Transformed abstract data into an interactive, visual overview, making the long-term impact of today’s
+                choices immediately tangible.</p>
+            </div>
+            <div class="feature-card">
+              
+              <h4>Relatable Context</h4>
+              <p>Anchored the dialogue in real-world concerns, such as physical wear and tear and the desire for early
+                retirement.</p>
+            </div>
+            <div class="feature-card">
+             
+              <h4>Radical Accessibility</h4>
+              <p>Prioritized low-complexity language and a "safe space" for questions to dismantle the formal barriers
+                of the pension industry.</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+        <!-- Solution + outcome cards spanning full width -->
+        <div class="project-intro solution-section" data-section="04 — Solution">
+
+          <h3>The app</h3>
+          <p class="intro-desc">
+            The core function of Horisont was to empower users to articulate their personal expectations and dreams for
+            retirement. By prioritizing human needs over abstract numbers, the solution made pension planning personal,
+            relatable, and present.
+            <br><br>
+            Once users defined their aspirations, the platform enabled them to assess the feasibility of their dreams
+            and adjust their financial habits accordingly. By bridging the gap between thought and action, Horisont
+            transformed vague retirement ideas into concrete goals, fostering clarity, motivation, and proactive
+            decision-making.
+          </p>
+
+          <div class="outcome-cards">
+            <div class="outcome-card">
+              <h4>Personal Visioning</h4>
+              <p>Users articulated their own dreams and expectations for life after work.</p>
+            </div>
+            <div class="outcome-card">
+              <h4>Relatable Planning</h4>
+              <p>Shifted the focus from abstract data to personal relevance, making pensions tangible rather than
+                intimidating.
+              </p>
+            </div>
+            <div class="outcome-card">
+              <h4>From Thought to Action</h4>
+              <p>Converted retirement thoughts into concrete milestones, driving both motivation and immediate action.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-visual solution-section">
+          <img src="img/horisont-pension.png" class="project-modal__image" style="max-width: 100%;" alt="HØRT recap"
+            loading="lazy">
+        </div>
+
+      </div><!-- end .project-modal__content -->
+    </div><!-- end .project-modal__sheet -->
   </div>
 
 
@@ -314,41 +410,183 @@
 
 
 
+
+
+  <!-- WHIRL -->
   <div class="project-modal" id="modal-whirl">
     <div class="project-modal__backdrop"></div>
-    <div class="project-modal__sheet">
-      <div class="project-modal__close-container">
-        <button class="project-modal__close">
-          <span class="material-symbols-rounded">close</span>
-        </button>
-      </div>
-      <header class="modal-topbar nav-bar">
-        <div class="logo">CHARLOTTE<span class="brandmark">YDE</span></div>
-        <div class="location-time">
-          Copenhagen, Denmark, <span class="modal-clock"></span>
-        </div>
-        <div class="dark-toggle modalDarkToggle"></div>
-      </header>
+    <button class="project-modal__close" aria-label="Close">
+      <span class="material-symbols-rounded">close</span>
+    </button>
 
+    <div class="project-modal__sheet">
+      <div class="drag-pill" role="button" aria-label="Drag to dismiss" tabindex="0"></div>
       <div class="project-modal__content">
-        <div class="project-intro">
-          <p class="p2">Final exam project 2025</p>
-          <p class="p2">Multimediadesign</p>
+        <!-- HERO -->
+
+        <div class="project-intro--hero">
+          <div class="meta-row">
+            <span class="tag">Concept development</span>
+            <span class="tag">Anxiety management tool</span>
+            <span class="tag">2025</span>
+          </div>
+
           <h2>WHIRL</h2>
           <p class="intro-desc">
-            Whirl is a Danish proof-of-concept app designed to support young adults with anxiety through planning tools,
-            a supportive chatbot, and evidence-based coping methods.
+            As the final project for my Multimedia Design degree, we explored the intersection of mental health and
+            technology. We aimed to create an AI tool to help manage anxiety and researched how individuals are
+            currently using AI as a support system for their mental well-being
+          </p>
+
+          <!-- Stats row replacing old timeline -->
+          <div class="stats-row">
+            <div class="stat">
+              <p class="stat-label">Role</p>
+              <p class="stat-val">UI Design <br> UX research <br> Frontend
+              </p>
+            </div>
+            <div class="stat">
+              <p class="stat-label">Type</p>
+              <p class="stat-val">Final Exam Project<br>Multimediadesign</p>
+            </div>
+            <div class="stat">
+              <p class="stat-label">Approach</p>
+              <p class="stat-val">Botpress<br>Design Thinking</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-visual">
+          <img src="img/whirl-desktop.png" class="project-visual" alt="Workshop" loading="lazy">
+        </div>
+
+
+
+        <!-- Problem -->
+        <div class="project-intro" data-section="01 — Problem">
+          <h3>The Mental Health Waiting Game</h3>
+          <p class="intro-desc">
+            The mental health sector is currently facing a global crisis, characterized by excessive waiting lists that
+            leave individuals struggling with anxiety without immediate support. This gap in the healthcare system has
+            driven a rising trend where users turn to Artificial Intelligence as a surrogate for traditional therapy.
             <br><br>
-            Developed through extensive research and expert
-            collaboration, Whirl prioritizes empathy, ethics, accessibility, and user safety, offering a free,
-            culturally relevant supplement to professional treatment.
+            While AI offers accessibility, it introduces critical challenges regarding safety and ethical
+            responsibility. This project explores the tension between the urgent need for anxiety management and the
+            necessity of creating a responsible, AI-driven support tool that provides value without compromising mental
+            well-being.
+          </p>
+        </div>
+
+        <div class="project-visual">
+          <img src="img/workshop.png" class="project-modal__image" alt="Workshop" loading="lazy">
+        </div>
+
+        <!-- Insights -->
+        <div class="project-visual">
+          <img src="img/Cover.png" class="project-modal__image" alt="Empathy map" loading="lazy">
+        </div>
+        <div class="project-intro" data-section="02 — Insights">
+          <h3>What we found</h3>
+          <p class="intro-desc">
+            The "Support Vacuum":
+            There is a critical gap between the initial realization of anxiety and the start of professional treatment.
+            Users often feel left in a "support vacuum" where symptoms can escalate due to the lack of immediate,
+            low-threshold tools.
+            <br><br>
+            The Need for Cognitive Distraction:
+            Anxiety is often fueled by intrusive thought loops. We found a high demand for "active grounding"—tools that
+            don't just track mood, but actively help users "get out of their heads" by facilitating immediate mental
+            shifts.
+            <br><br>
+            Personalization as Trust:
+            Generic mental health apps often feel clinical and detached. Our insights showed that trust is built through
+            personalization. By using an LLM to facilitate dialogue, the solution moves from being a static tool to a
+            dynamic companion that understands the user’s specific context.
+          </p>
+        </div>
+
+
+        <!-- Concept -->
+        <div class="project-intro" data-section="03 — Concept">
+          <h3>AI Mental Health Companion</h3>
+          <p class="intro-desc">
+            Our concept is a mobile application that bridges the gap in mental health support through a combination of
+            proactive nudging and reactive AI dialogue.
+
+            At its heart is an LLM-powered chatbot that facilitates supportive conversations, helping users navigate
+            anxious moments through real-time interaction.
+            <br><br>
+            To complement the dialogue, the app features a suite of
+            grounding tools, such as breathing exercises and metacognitive techniques. These are supported by an
+            intelligent calendar function that nudges the user toward consistent practice, ensuring that mental
+            well-being becomes a manageable, daily routine.
           </p>
         </div>
         <div class="project-visual">
-          <img src="img/whirl-app 00.47.45.png" class="project-modal__image" alt="">
+          <!-- Feature cards — span full width, slide in on scroll -->
+          <div class="feature-cards js-feature-cards">
+            <div class="feature-card">
+             
+              <h4>Co-regulate through Dialogue</h4>
+              <p>The chatbot engages users in supportive conversations, helping them articulate their feelings and
+                de-escalate anxiety in the moment.</p>
+            </div>
+            <div class="feature-card">
+             
+              <h4>Personalized Guidance</h4>
+              <p>By leveraging Natural Language Processing (NLP), the bot can suggest specific breathing or
+                metacognitive exercises based on the context of the conversation.</p>
+            </div>
+            <div class="feature-card">
+              
+              <h4>Lowering the Barrier to Support</h4>
+              <p>For users who find it difficult to speak to a person, the chatbot provides a "safe space" to practice
+                self-reflection and coping strategies.</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+        <!-- Solution + outcome cards spanning full width -->
+        <div class="project-intro solution-section" data-section="04 — Solution">
+
+          <h3>Whirl</h3>
+          <p class="intro-desc">
+            Whirl is a proactive mental health application designed to act as a bridge for individuals navigating
+            anxiety. By combining intelligent scheduling with real-time AI support and immersive exercises, Whirl
+            transforms passive waiting time into an active journey toward better mental well-being.
+            <br><br>
+            Conceptually, Whirl is built on the principle of Co-regulation. By synchronizing technology with human
+            physiology (breathing) and daily life (calendar), the app moves from being a simple utility to a dynamic
+            companion.
+            <br><br>
+            Using Botpress allowed us to bridge the gap between advanced LLM capabilities and clinical safety, ensuring
+            that the AI’s responses remain focused on de-escalation and supportive guidance without the risks often
+            associated with open-ended AI models.
+          </p>
+
+          <div class="outcome-cards">
+            <div class="outcome-card">
+              <h4>Intelligent Calendar Synchronization</h4>
+              <p>Users can schedule specific "mental pitstops" and receive proactive reminders, ensuring that self-care is woven into their daily routine rather than being an afterthought.</p>
+            </div>
+            <div class="outcome-card">
+              <h4>Context-Aware Mental Exercises</h4>
+              <p>Based on the user’s schedule, Whirl suggests specific exercises tailored to the situation.
+              </p>
+            </div>
+            <div class="outcome-card">
+              <h4>Controlled AI Dialogue (Botpress Implementation)</h4>
+              <p>The heart of the interaction is a custom-built chatbot developed with Botpress. By using a controlled environment, we ensure an extra layer of "safety" and reliability.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-visual solution-section">
+          <img src="img/whirl-app 00.47.45.png" class="project-modal__image" style="max-width: 100%;" alt="HØRT recap"
+            loading="lazy">
+        </div>
+
+      </div><!-- end .project-modal__content -->
+    </div><!-- end .project-modal__sheet -->
   </div>
 
 
@@ -379,8 +617,8 @@
           perspective.
         </p>
       </div>
-      <div class="about-card">
-        <h3>Experience</h3>
+      <div class="about-card about-card--timeline">
+        <h3>Education & Experience</h3>
         <div class="timeline">
 
           <div class="timeline-item">
@@ -395,7 +633,7 @@
             <span class="dot"></span>
             <div class="timeline-content">
               <p class="title">2023 – 2025</p>
-              <p class="desc">Multimediadesign Student</p>
+              <p class="desc">Multimediadesign Graduate</p>
             </div>
           </div>
           <div class="timeline-item">
@@ -413,7 +651,13 @@
               <p class="desc">Store Manager, Matas A/S</p>
             </div>
           </div>
-
+          <div class="timeline-item">
+            <span class="dot"></span>
+            <div class="timeline-content">
+              <p class="title">2018 – 2020</p>
+              <p class="desc">Sales Assistant Trainee, Matas A/S</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -452,11 +696,32 @@
 
     const toggle = document.getElementById("darkToggle");
 
-    // Apply saved theme on page load
+    function syncSafariThemeUi() {
+      const isDark = document.body.classList.contains("dark");
+      const themeColorMeta = document.getElementById("themeColorMeta");
+      if (themeColorMeta) {
+        themeColorMeta.setAttribute("content", isDark ? "#111111" : "#ffffff");
+      }
+    }
+
+    // Apply saved theme on page load.
+    // Fallback: use the user's system preference on first visit.
     const savedTheme = localStorage.getItem("theme");
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
     if (savedTheme) {
       document.body.classList.toggle("dark", savedTheme === "dark");
+    } else {
+      document.body.classList.toggle("dark", prefersDarkScheme.matches);
     }
+    syncSafariThemeUi();
+
+    // Keep first-visit users in sync with OS theme changes.
+    prefersDarkScheme.addEventListener("change", (event) => {
+      if (!localStorage.getItem("theme")) {
+        document.body.classList.toggle("dark", event.matches);
+        syncSafariThemeUi();
+      }
+    });
 
     // Toggle dark mode on click
     toggle.addEventListener("click", () => {
@@ -468,6 +733,8 @@
       } else {
         localStorage.setItem("theme", "light");
       }
+
+      syncSafariThemeUi();
     });
   </script>
 
@@ -498,12 +765,130 @@
 
       closeBtn.addEventListener("click", close);
       backdrop.addEventListener("click", close);
+
+      setupDragToDismiss(modal, close);
+    });
+
+    // Drag-pill: let the user drag the sheet down to dismiss the modal.
+    function setupDragToDismiss(modal, close) {
+      const pill = modal.querySelector(".drag-pill");
+      const sheet = modal.querySelector(".project-modal__sheet");
+      if (!pill || !sheet) return;
+
+      const DISMISS_DISTANCE = 140;   // px past which a release dismisses
+      const DISMISS_VELOCITY = 0.6;   // px/ms — a quick flick also dismisses
+
+      let activePointerId = null;
+      let startY = 0;
+      let lastY = 0;
+      let lastTime = 0;
+      let velocity = 0;
+      let dragging = false;
+
+      function clearDragVars() {
+        modal.style.removeProperty("--drag-y");
+      }
+
+      function onPointerDown(e) {
+        if (e.button !== undefined && e.button !== 0) return;
+        dragging = true;
+        activePointerId = e.pointerId;
+        startY = e.clientY;
+        lastY = e.clientY;
+        lastTime = performance.now();
+        velocity = 0;
+        modal.classList.add("is-dragging");
+        try { pill.setPointerCapture(e.pointerId); } catch (_) { }
+        e.preventDefault();
+      }
+
+      function onPointerMove(e) {
+        if (!dragging || e.pointerId !== activePointerId) return;
+        const now = performance.now();
+        const dy = Math.max(0, e.clientY - startY);
+        const dt = now - lastTime;
+        if (dt > 0) {
+          // Low-pass filter velocity to avoid spikes from jittery events.
+          const instantaneous = (e.clientY - lastY) / dt;
+          velocity = velocity * 0.6 + instantaneous * 0.4;
+        }
+        lastY = e.clientY;
+        lastTime = now;
+        modal.style.setProperty("--drag-y", dy + "px");
+      }
+
+      function finishDrag(shouldDismiss) {
+        modal.classList.remove("is-dragging");
+        if (shouldDismiss) {
+          // Removing .open lets the existing CSS transition slide the sheet
+          // from its current drag offset down to translateY(100%).
+          close();
+          const cleanup = () => {
+            clearDragVars();
+            sheet.removeEventListener("transitionend", cleanup);
+          };
+          sheet.addEventListener("transitionend", cleanup, { once: true });
+        } else {
+          // Snap back to rest position.
+          modal.style.setProperty("--drag-y", "0px");
+          const cleanup = (ev) => {
+            if (ev.propertyName !== "transform") return;
+            clearDragVars();
+            sheet.removeEventListener("transitionend", cleanup);
+          };
+          sheet.addEventListener("transitionend", cleanup);
+        }
+      }
+
+      function onPointerUp(e) {
+        if (!dragging || e.pointerId !== activePointerId) return;
+        dragging = false;
+        try { pill.releasePointerCapture(e.pointerId); } catch (_) { }
+        const dy = Math.max(0, e.clientY - startY);
+        const shouldDismiss = dy > DISMISS_DISTANCE || velocity > DISMISS_VELOCITY;
+        finishDrag(shouldDismiss);
+        activePointerId = null;
+      }
+
+      function onPointerCancel(e) {
+        if (!dragging) return;
+        dragging = false;
+        activePointerId = null;
+        finishDrag(false);
+      }
+
+      pill.addEventListener("pointerdown", onPointerDown);
+      pill.addEventListener("pointermove", onPointerMove);
+      pill.addEventListener("pointerup", onPointerUp);
+      pill.addEventListener("pointercancel", onPointerCancel);
+
+      // Keyboard fallback: Enter/Space on the focused pill dismisses too.
+      pill.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          close();
+        }
+      });
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      const openModal = document.querySelector(".project-modal.open");
+      if (openModal) {
+        openModal.classList.remove("open");
+        document.body.style.overflow = "";
+      }
     });
 
     // HERO LOGO SCROLL EFFECT
     const heroLogo = document.getElementById("heroLogo");
 
     window.addEventListener("scroll", () => {
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        heroLogo.style.transform = "";
+        return;
+      }
+
       const scrollY = window.scrollY;
       const speed = 0.1; // Justér hvor stærkt den bevæger sig
 
@@ -517,6 +902,7 @@
           "theme",
           document.body.classList.contains("dark") ? "dark" : "light"
         );
+        syncSafariThemeUi();
       });
     });
 
@@ -579,9 +965,34 @@
 
     const timeline = document.querySelector('.timeline');
     observer.observe(timeline);
+
+    // wherever you initialise the modal, add:
+    document.querySelectorAll('.project-modal__backdrop').forEach(backdrop => {
+      backdrop.addEventListener('click', () => {
+        backdrop.closest('.project-modal').classList.remove('open');
+      });
+    });
+
+    document.querySelectorAll('.js-feature-cards').forEach(container => {
+  const cards = container.querySelectorAll('.feature-card');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        cards.forEach(card => card.classList.add('visible'));
+        observer.disconnect();
+      }
+    });
+  }, {
+    threshold: 0.2,
+    root: container.closest('.project-modal__sheet')
+  });
+
+  observer.observe(container);
+});
   </script>
 
-  
+
 </body>
 
 </html>
